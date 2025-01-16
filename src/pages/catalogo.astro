@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ProductList } from "../components/ProductList";
+import data from "../data/data";
+console.log(data);
+---
+
+<Layout>
+  <ProductList client:load />
+</Layout>
