@@ -8,11 +8,56 @@ import Footer from "@components/Footer.astro";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylers - Calzado: Elegancia, Comodidad y Estilo</title>
+    <meta
+      name="description"
+      content="Explora nuestra colección de calzado formal, casual y deportivo para damas y caballeros. Combina estilo, calidad y comodidad en cada paso."
+    />
+    <meta
+      name="keywords"
+      content="calzado, zapatos formales, calzado casual, zapatos deportivos, calzado para damas, calzado para caballeros, zapatos elegantes, zapatos cómodos"
+    />
+    <meta name="author" content="Stylers" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Stylers - Calzado: Elegancia, Comodidad y Estilo"
+    />
+    <meta
+      property="og:description"
+      content="Descubre nuestra amplia gama de calzado para cualquier ocasión. Perfecto para damas y caballeros que buscan calidad y diseño."
+    />
+    <meta property="og:image" content="https://example.com/og-image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Stylers - Calzado: Elegancia, Comodidad y Estilo"
+    />
+    <meta
+      name="twitter:description"
+      content="Explora nuestra colección de calzado formal, casual y deportivo para damas y caballeros."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/twitter-image.jpg"
+    />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- CSS and Scripts -->
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script async src="/scripts/main.js"></script>
   </head>
+
   <body>
     <Nav />
     <slot />
