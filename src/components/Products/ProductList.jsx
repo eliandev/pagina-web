@@ -16,8 +16,6 @@ export const ProductList = () => {
     if (categoryParam) {
       setSelectedCategories((prev) => [...prev, categoryParam]);
     }
-
-    console.log(categoryParam);
   }, []);
 
   useEffect(() => {

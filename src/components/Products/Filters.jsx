@@ -20,8 +20,6 @@ export const Filters = ({
     if (categoryParam) {
       setTempCategories((prev) => [...prev, categoryParam]);
     }
-
-    console.log(categoryParam);
   }, []);
 
   const handleTempGenderChange = (e) => {
