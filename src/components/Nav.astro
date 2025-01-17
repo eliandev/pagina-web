@@ -1,10 +1,22 @@
 <header class="header">
   <div class="navigation">
-    <a href="/" class="brand">STYLERS</a>
+    <a href="/" class="brand">
+      <span>S</span>
+      <span>T</span>
+      <span>Y</span>
+      <span>L</span>
+      <span>E</span>
+      <span>R</span>
+      <span>S</span>
+    </a>
 
     <button class="hamburger" aria-label="Toggle menu"> ☰ </button>
   </div>
   <ul class="links">
+    <li class="item">
+      <a class="link active" href="/catalogo">Home</a>
+    </li>
+
     <li class="item">
       <a class="link" href="/catalogo">catálogo</a>
     </li>
@@ -33,9 +45,17 @@
   .header .brand {
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 8px;
+    letter-spacing: 2px;
     text-decoration: none;
     color: #282121;
+  }
+
+  .brand span {
+    margin: 0;
+    padding: 0;
+  }
+  .brand span:nth-child(even) {
+    color: #7a4bf1;
   }
 
   .hamburger {
@@ -67,7 +87,12 @@
     transition: color 0.3s ease-in-out;
   }
 
-  .links li a::after {
+  .links .link.active {
+    color: #4800ff;
+  }
+
+  .links li a::after,
+  .links .link.active::after {
     content: "";
     display: block;
     background-color: #4800ff;
@@ -83,12 +108,13 @@
     color: #4800ff;
   }
 
-  .links li a:hover::after {
+  .links li a:hover::after,
+  .links .link.active::after {
     width: 100%;
   }
 
   /* Responsive Design */
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     .header {
       width: 100%;
       padding: 0;
