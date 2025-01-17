@@ -1,0 +1,27 @@
+---
+import data from "@data/data";
+import { ProductCard } from "./Products/ProductCard";
+
+const products = data.products.slice(0, 5);
+---
+
+<section class="product-shelf wrapper">
+  <h2 class="title">Trending products</h2>
+  <div class="shelf">
+    {products.map((product) => <ProductCard product={product} />)}
+  </div>
+</section>
+
+<style>
+  .product-shelf .shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    column-gap: 4rem;
+    row-gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .title {
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+  }
+</style>
