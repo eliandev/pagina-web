@@ -23,7 +23,7 @@ export const categories = [
 
 export const genders = [
   {
-    name: "Hombre",
+    name: "Caballero",
     link: "/catalogo?gender=hombre",
     image: "/images/male.jpg",
   },

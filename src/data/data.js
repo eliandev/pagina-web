@@ -3,8 +3,8 @@ const data = {
     {
       id: 1,
       name: "Zapatillas Running Pro",
-      gender: "Caballeros",
-      category: "Deportivos",
+      gender: "Caballero",
+      category: "Deportes",
       price: 75.99,
       image: "https://example.com/products/running-pro-men.jpg",
       description:
@@ -22,7 +22,7 @@ const data = {
     {
       id: 3,
       name: "Zapatos Oxford Clásicos",
-      gender: "Caballeros",
+      gender: "Caballero",
       category: "Formales",
       price: 89.99,
       image: "https://example.com/products/oxford-classic-men.jpg",
@@ -33,7 +33,7 @@ const data = {
       id: 4,
       name: "Deportivas Urbanas",
       gender: "Dama",
-      category: "Deportivos",
+      category: "Deportes",
       price: 65.0,
       image: "https://example.com/products/urban-sport-women.jpg",
       description: "Diseño moderno para entrenamientos y uso diario.",
@@ -41,7 +41,7 @@ const data = {
     {
       id: 5,
       name: "Mocasines Elegance",
-      gender: "Caballeros",
+      gender: "Caballero",
       category: "Formales",
       price: 78.2,
       image: "https://example.com/products/elegance-loafers-men.jpg",
@@ -59,8 +59,8 @@ const data = {
     {
       id: 7,
       name: "Zapatillas Deportivas Flex",
-      gender: "Caballeros",
-      category: "Deportivos",
+      gender: "Caballero",
+      category: "Deportes",
       price: 68.5,
       image: "https://example.com/products/sport-flex-men.jpg",
       description: "Confort y resistencia para cualquier actividad deportiva.",
@@ -69,7 +69,7 @@ const data = {
       id: 8,
       name: "Tacones Glamour",
       gender: "Dama",
-      category: "Formales",
+      category: "Fiesta",
       price: 95.0,
       image: "https://example.com/products/glamour-heels-women.jpg",
       description: "Tacones elegantes para eventos importantes.",
@@ -77,7 +77,7 @@ const data = {
     {
       id: 9,
       name: "Zapatillas Casual Classic",
-      gender: "Caballeros",
+      gender: "Caballero",
       category: "Casuales",
       price: 45.99,
       image: "https://example.com/products/casual-classic-men.jpg",

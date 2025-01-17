@@ -3,18 +3,22 @@ import { genders, categories } from "@data/catalog-config";
 import "@styles/components/filters.css";
 import "@styles/components/btns.css";
 
-export const Filters = () => {
-  const [selectedGender, setSelectedGender] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState([]);
+export const Filters = ({
+  selectedGender,
+  setSelectedGender,
+  selectedCategories,
+  setSelectedCategories,
+}) => {
+  const [tempGender, setTempGender] = useState(selectedGender);
+  const [tempCategories, setTempCategories] = useState(selectedCategories);
 
-  const totalProducts = 100;
-  const handleGenderChange = (e) => {
-    setSelectedGender(e.target.value);
+  const handleTempGenderChange = (e) => {
+    setTempGender(e.target.value);
   };
 
-  const handleCategoryChange = (e) => {
+  const handleTempCategoryChange = (e) => {
     const category = e.target.value;
-    setSelectedCategories((prev) =>
+    setTempCategories((prev) =>
       prev.includes(category)
         ? prev.filter((item) => item !== category)
         : [...prev, category]
@@ -22,20 +26,13 @@ export const Filters = () => {
   };
 
   const handleReset = () => {
-    setSelectedGender("");
-    setSelectedCategories([]);
-    setFilteredCount(totalProducts); // Reset filtered count
+    setTempGender("");
+    setTempCategories([]);
   };
 
   const handleFilter = () => {
-    // Implement your filter logic here
-    // Update `filteredCount` based on selected filters
-    console.log("Filters applied:", {
-      selectedGender,
-      selectedCategories,
-    });
-    // Simulated filter count
-    setFilteredCount(Math.max(10, Math.random() * totalProducts));
+    setSelectedGender(tempGender);
+    setSelectedCategories(tempCategories);
   };
 
   return (
@@ -52,8 +49,8 @@ export const Filters = () => {
               id={gender.name}
               name="gender"
               value={gender.name}
-              checked={selectedGender === gender.name}
-              onChange={handleGenderChange}
+              checked={tempGender === gender.name}
+              onChange={handleTempGenderChange}
             />
             <label htmlFor={gender.name}>{gender.name}</label>
           </li>
@@ -70,8 +67,8 @@ export const Filters = () => {
               id={category.name}
               name="category"
               value={category.name}
-              checked={selectedCategories.includes(category.name)}
-              onChange={handleCategoryChange}
+              checked={tempCategories.includes(category.name)}
+              onChange={handleTempCategoryChange}
             />
             <label htmlFor={category.name}>{category.name}</label>
           </li>
