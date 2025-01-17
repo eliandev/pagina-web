@@ -1,9 +1,8 @@
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevenir el envío del formulario
+    event.preventDefault();
 
-    // Obtener los valores de los campos
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -36,7 +35,7 @@ document
     } else if (!phonePattern.test(phone)) {
       document.getElementById("phoneError").style.display = "block";
       isValid = false;
-    } else if (phone.length < 10) {
+    } else if (phone.length < 8) {
       document.getElementById("phoneLengthError").style.display = "block";
       isValid = false;
     }
