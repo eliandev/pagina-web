@@ -1,37 +1,37 @@
-.filters {
+.filters-desktop {
   padding: 1rem;
   margin-right: 2rem;
 }
 
-.filters label {
+.filters-desktop label {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.filters .filters__main-label {
+.filters-desktop .filters__main-label {
   margin-bottom: 2rem;
 }
 
-.filters ul.list {
+ul.list {
   list-style: none;
   padding: 0;
   margin: 1rem;
 }
 
-.filters ul.list li {
+ul.list li {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
   gap: 0.5rem;
 }
 
-.filters ul.list li input[type="checkbox"],
-.filters ul.list li input[type="radio"] {
+ul.list li input[type="checkbox"],
+ul.list li input[type="radio"] {
   display: none;
 }
 
-.filters ul.list li input[type="checkbox"] + label,
-.filters ul.list li input[type="radio"] + label {
+ul.list li input[type="checkbox"] + label,
+ul.list li input[type="radio"] + label {
   position: relative;
   padding-left: 2rem;
   font-size: 1rem;
@@ -42,7 +42,7 @@
 }
 
 /* Estilo para el "checkbox" */
-.filters ul.list li input[type="checkbox"] + label::before {
+ul.list li input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -56,12 +56,12 @@
   transition: all 0.3s ease;
 }
 
-.filters ul.list li input[type="checkbox"]:checked + label::before {
+ul.list li input[type="checkbox"]:checked + label::before {
   background-color: #4800ff;
   border-color: #4800ff;
 }
 
-.filters ul.list li input[type="checkbox"]:checked + label::after {
+ul.list li input[type="checkbox"]:checked + label::after {
   content: "✔";
   position: absolute;
   top: 50%;
@@ -72,7 +72,7 @@
   transition: all 0.3s ease;
 }
 
-.filters ul.list li input[type="radio"] + label::before {
+ul.list li input[type="radio"] + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -86,12 +86,12 @@
   transition: all 0.3s ease;
 }
 
-.filters ul.list li input[type="radio"]:checked + label::before {
+ul.list li input[type="radio"]:checked + label::before {
   background-color: #4800ff;
   border-color: #4800ff;
 }
 
-.filters ul.list li input[type="radio"]:checked + label::after {
+ul.list li input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -104,8 +104,8 @@
   transition: all 0.3s ease;
 }
 
-.filters ul.list li input[type="checkbox"] + label:hover,
-.filters ul.list li input[type="radio"] + label:hover {
+ul.list li input[type="checkbox"] + label:hover,
+ul.list li input[type="radio"] + label:hover {
   color: #4800ff;
 }
 
@@ -113,4 +113,77 @@
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+/* Filtros para Desktop */
+.filters-desktop {
+  display: block;
+}
+
+/* Botón de abrir filtros (solo en móviles) */
+.filters__open-btn {
+  display: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4800ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.filters__open-btn:hover {
+  background-color: #3600cc;
+}
+
+/* Modal contenedor (solo para mobile) */
+.filters-modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.filters-modal--open {
+  right: 0;
+}
+
+/* Contenido del modal */
+.filters-modal__content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters-modal__close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4800ff;
+  cursor: pointer;
+}
+
+.filters-modal__close-btn:hover {
+  color: #3600cc;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+  .filters-desktop {
+    display: none;
+  }
+
+  .filters__open-btn {
+    display: block;
+  }
 }
