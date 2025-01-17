@@ -32,14 +32,4 @@ export const genders = [
     link: "/catalogo?gender=dama",
     image: "/images/female.jpg",
   },
-  {
-    name: "Niño",
-    link: "/catalogo?gender=nino",
-    image: "/images/kid.jpg",
-  },
-  {
-    name: "Ninas",
-    link: "/catalogo?gender=ninas",
-    image: "/images/girls.jpg",
-  },
 ];
