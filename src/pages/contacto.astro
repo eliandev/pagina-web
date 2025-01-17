@@ -1,7 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Form from "@components/Form.astro";
+import "@styles/form.css";
+import contactImg from "@assets/contact.png";
 ---
 
 <Layout>
-  <h1>Contacto</h1>
+  <div class="contact-form-container">
+    <div class="form">
+      <h2>Formulario de Contacto</h2>
+      <Form />
+    </div>
+
+    <img class="img" src={contactImg.src} alt="" srcset="" />
+  </div>
 </Layout>
