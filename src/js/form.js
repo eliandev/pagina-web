@@ -54,5 +54,11 @@ document
       console.log("Email:", email);
       console.log("Teléfono:", phone);
       console.log("Mensaje:", message);
+
+      // Limpiar los inputs
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("message").value = "";
     }
   });
