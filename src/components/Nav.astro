@@ -14,17 +14,14 @@
   </div>
   <ul class="links">
     <li class="item">
-      <a class="link active" href="/catalogo">Home</a>
+      <a class="link" href="/">Home</a>
     </li>
 
     <li class="item">
-      <a class="link" href="/catalogo">catálogo</a>
+      <a class="link" href="/catalogo">Catálogo</a>
     </li>
     <li class="item">
       <a class="link" href="/contacto">Contacto</a>
-    </li>
-    <li class="item">
-      <a class="link" href="/login">Login</a>
     </li>
   </ul>
 </header>
@@ -171,5 +168,20 @@
   hamburger.addEventListener("click", () => {
     console.log("hamburger clicked=");
     links.classList.toggle("active");
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".link");
+    const currentPath = window.location.pathname;
+
+    console.log(currentPath);
+
+    links.forEach((link) => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
   });
 </script>
