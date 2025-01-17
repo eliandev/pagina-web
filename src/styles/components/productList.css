@@ -1,0 +1,11 @@
+.product-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.product-list__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

@@ -1,10 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { ProductList } from "../components/ProductList";
+import { ProductList } from "../components/Products/ProductList";
 import data from "../data/data";
 console.log(data);
 ---
 
 <Layout>
-  <ProductList client:load />
+  <section class="wrapper">
+    <h1 class="title">Nuestro catalogo:</h1>
+    <ProductList client:load />
+  </section>
 </Layout>
+
+<style>
+  .title {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 600;
+  }
+</style>

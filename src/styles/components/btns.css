@@ -1,0 +1,40 @@
+/* Estilo General para Botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4800ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover y Foco */
+.btn:hover {
+  background-color: #3600cc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: 2px solid #3600cc;
+  outline-offset: 4px;
+}
+
+/* Botón Secundario (Limpiar Filtros) */
+.btn.btn-secondary {
+  background-color: #f3f3f3;
+  color: #282121;
+  border: 1px solid #4800ff;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #4800ff;
+  color: #fff;
+  border-color: #3600cc;
+}
