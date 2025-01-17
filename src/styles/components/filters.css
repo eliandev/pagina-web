@@ -3,12 +3,12 @@
   margin-right: 2rem;
 }
 
-.filters-desktop label {
+label {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.filters-desktop .filters__main-label {
+.filters__main-label {
   margin-bottom: 2rem;
 }
 
@@ -41,7 +41,6 @@ ul.list li input[type="radio"] + label {
   transition: color 0.3s ease-in-out;
 }
 
-/* Estilo para el "checkbox" */
 ul.list li input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
@@ -86,12 +85,12 @@ ul.list li input[type="radio"] + label::before {
   transition: all 0.3s ease;
 }
 
-ul.list li input[type="radio"]:checked + label::before {
+ul.list li input[type="radio"].selected + label::before {
   background-color: #4800ff;
   border-color: #4800ff;
 }
 
-ul.list li input[type="radio"]:checked + label::after {
+ul.list li input[type="radio"].selected + label::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -133,6 +132,7 @@ ul.list li input[type="radio"] + label:hover {
   cursor: pointer;
   margin-bottom: 2rem;
 }
+
 .filters__open-btn:hover {
   background-color: #3600cc;
 }

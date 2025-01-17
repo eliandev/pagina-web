@@ -3,6 +3,7 @@
   grid-template-columns: auto 1fr;
   max-width: 1440px;
   margin: auto;
+  padding-bottom: 5rem;
 }
 
 .product-list__wrapper {
@@ -10,6 +11,19 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   column-gap: 1rem;
   row-gap: 1rem;
+}
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+.not-found b {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {

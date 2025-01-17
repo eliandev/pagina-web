@@ -10,6 +10,17 @@ export const ProductList = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    const categoryParam = params.get("category");
+    if (categoryParam) {
+      setSelectedCategories((prev) => [...prev, categoryParam]);
+    }
+
+    console.log(categoryParam);
+  }, []);
+
+  useEffect(() => {
     if (data && data.products) {
       setProducts(data.products);
     }
@@ -43,7 +54,9 @@ export const ProductList = () => {
             <ProductCard product={product} key={i} />
           ))
         ) : (
-          <p>No se encontraron productos para los filtros seleccionados.</p>
+          <p className="not-found">
+            <b>No se encontraron productos</b> para los filtros seleccionados.
+          </p>
         )}
       </div>
     </section>

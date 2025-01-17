@@ -1,22 +1,22 @@
 export const categories = [
   {
     name: "Casuales",
-    link: "/catalogo?category=casual",
+    link: "/catalogo?category=Casuales",
     image: "/images/casual.jpg",
   },
   {
     name: "Deportes",
-    link: "/catalogo?category=deportes",
+    link: "/catalogo?category=Deportes",
     image: "/images/sports.jpg",
   },
   {
     name: "Formales",
-    link: "/catalogo?category=formal",
+    link: "/catalogo?category=Formales",
     image: "/images/new.jpg",
   },
   {
     name: "Fiesta",
-    link: "/catalogo?category=fiesta",
+    link: "/catalogo?category=Fiesta",
     image: "/images/vintage.jpg",
   },
 ];

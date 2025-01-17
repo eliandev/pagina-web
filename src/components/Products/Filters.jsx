@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { genders, categories } from "@data/catalog-config";
 import "@styles/components/filters.css";
 import "@styles/components/btns.css";
@@ -13,11 +13,24 @@ export const Filters = ({
   const [tempCategories, setTempCategories] = useState(selectedCategories);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    const categoryParam = params.get("category");
+    if (categoryParam) {
+      setTempCategories((prev) => [...prev, categoryParam]);
+    }
+
+    console.log(categoryParam);
+  }, []);
+
   const handleTempGenderChange = (e) => {
+    console.log(e.target.value);
     setTempGender(e.target.value);
   };
 
   const handleTempCategoryChange = (e) => {
+    console.log(e.target.value);
     const category = e.target.value;
     setTempCategories((prev) =>
       prev.includes(category)
@@ -66,13 +79,14 @@ export const Filters = ({
               <li key={gender.name}>
                 <input
                   type="radio"
-                  id={gender.name}
+                  id={`mb-${gender.name}`}
                   name="gender"
                   value={gender.name}
                   checked={tempGender === gender.name}
                   onChange={handleTempGenderChange}
+                  className={tempGender === gender.name ? "selected" : ""}
                 />
-                <label htmlFor={gender.name}>{gender.name}</label>
+                <label htmlFor={`mb-${gender.name}`}>{gender.name}</label>
               </li>
             ))}
           </ul>
@@ -127,6 +141,7 @@ export const Filters = ({
                 value={gender.name}
                 checked={tempGender === gender.name} // Cambié aquí para usar tempGender
                 onChange={handleTempGenderChange}
+                className={tempGender === gender.name ? "selected" : ""}
               />
               <label htmlFor={gender.name}>{gender.name}</label>
             </li>
