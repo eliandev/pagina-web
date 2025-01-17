@@ -14,20 +14,20 @@ document
 
     let isValid = true;
 
-    // Validar nombre (obligatorio)
+    // Validar nombre
     if (!name.trim()) {
       document.getElementById("nameError").style.display = "block";
       isValid = false;
     }
 
-    // Validar email (obligatorio y formato válido)
+    // Validar email
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!email.trim() || !emailPattern.test(email)) {
       document.getElementById("emailError").style.display = "block";
       isValid = false;
     }
 
-    // Validar teléfono (solo números y longitud mínima)
+    // Validar teléfono
     const phonePattern = /^\d+$/;
     if (!phone.trim()) {
       document.getElementById("phoneError").style.display = "block";
@@ -40,25 +40,26 @@ document
       isValid = false;
     }
 
-    // Validar mensaje (obligatorio)
+    // Validar mensaje
     if (!message.trim()) {
       document.getElementById("messageError").style.display = "block";
       isValid = false;
     }
 
-    // Si todo es válido, enviar el formulario (por ejemplo, loguear los datos)
+    // Mostrar mensaje de éxito si todo es válido
     if (isValid) {
-      alert("Formulario enviado con éxito!");
-      // Aquí puedes agregar el código para enviar el formulario (por ejemplo, con fetch o axios)
-      console.log("Nombre:", name);
-      console.log("Email:", email);
-      console.log("Teléfono:", phone);
-      console.log("Mensaje:", message);
+      const successMessage = document.getElementById("successMessage");
+      successMessage.style.display = "block";
 
       // Limpiar los inputs
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("phone").value = "";
       document.getElementById("message").value = "";
+
+      // Ocultar mensaje de éxito después de 3 segundos
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 3000); // 3000 ms = 3 segundos
     }
   });
