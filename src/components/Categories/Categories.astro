@@ -1,9 +1,15 @@
 ---
 import Category from "./Category.astro";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
 ---
 
 <section class="categories">
-  <h2>Explora nuestras categorias</h2>
+  <h2>{title}</h2>
   <div class="grid">
     <Category />
   </div>
