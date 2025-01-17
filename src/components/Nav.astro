@@ -6,7 +6,7 @@
   </div>
   <ul class="links">
     <li class="item">
-      <a class="link" href="/catalogo">Catalogo</a>
+      <a class="link" href="/catalogo">catálogo</a>
     </li>
     <li class="item">
       <a class="link" href="/contacto">Contacto</a>
@@ -27,6 +27,7 @@
     padding-top: 1.3rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: 1rem;
   }
 
   .header .brand {
@@ -99,6 +100,7 @@
       align-items: center;
       width: 90%;
       margin-top: 0.8rem;
+      margin-bottom: 1rem;
       margin-left: auto;
       margin-right: auto;
     }
@@ -109,6 +111,7 @@
 
     .links {
       display: none;
+      height: 100vh;
       flex-direction: column;
       position: absolute;
       top: 3rem;
@@ -123,6 +126,7 @@
 
     .links.active {
       display: flex;
+      z-index: 3;
     }
 
     .links li a {
